@@ -1,8 +1,6 @@
 // Forest Fire Detection System - Frontend JavaScript
 if (typeof APP_API_URL === 'undefined') {
-    window.APP_API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-        ? 'http://localhost:5000' 
-        : 'http://forestfire-env.eba-4jp35bkn.us-west-2.elasticbeanstalk.com';
+    window.APP_API_URL = window.location.origin;
 }
 const APP_API_URL = window.APP_API_URL;
 
