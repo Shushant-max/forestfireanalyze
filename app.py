@@ -7,10 +7,13 @@ project_dir = os.path.join(base_dir, 'FROEST-FIRE-DETECTION-main', 'forest-fire-
 sys.path.append(project_dir)
 
 # Change working directory to the project folder so it can find 'data', 'models', etc.
-os.chdir(project_dir)
+try:
+    os.chdir(project_dir)
+except OSError:
+    pass
 
 # Import the actual Flask app
-from backend.app import app
+from backend.app import application as app
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))

@@ -11,21 +11,16 @@ def setup_logging():
     """
     Setup logging configuration
     """
-    os.makedirs(LOGS_DIR, exist_ok=True)
+    try:
+        os.makedirs(LOGS_DIR, exist_ok=True)
+    except OSError:
+        pass  # Read-only file system on Vercel
 
     logging.basicConfig(
-        filename=PREDICTIONS_LOG,
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S'
     )
-
-    # Also log to console
-    console = logging.StreamHandler()
-    console.setLevel(logging.INFO)
-    formatter = logging.Formatter('%(levelname)s - %(message)s')
-    console.setFormatter(formatter)
-    logging.getLogger('').addHandler(console)
 
 def log_prediction(image_path, prediction, confidence):
     """
@@ -52,7 +47,10 @@ def create_directories():
     ]
 
     for dir_path in directories:
-        os.makedirs(dir_path, exist_ok=True)
+        try:
+            os.makedirs(dir_path, exist_ok=True)
+        except OSError:
+            pass  # Ignore on read-only file systems
 
 def validate_image_file(file_path):
     """

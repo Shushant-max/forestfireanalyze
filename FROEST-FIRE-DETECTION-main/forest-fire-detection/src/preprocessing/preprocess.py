@@ -2,8 +2,8 @@
 Image preprocessing utilities for Forest Fire Detection
 """
 
-import cv2
 import numpy as np
+from PIL import Image
 from src.config.config import IMG_HEIGHT, IMG_WIDTH
 
 def preprocess_image(image_path):
@@ -16,16 +16,20 @@ def preprocess_image(image_path):
     Returns:
         numpy.ndarray: Preprocessed image array (flattened for Random Forest)
     """
-    # Read image
-    image = cv2.imread(image_path)
-    if image is None:
-        raise ValueError(f"Could not read image from {image_path}")
+    # Read image using Pillow
+    try:
+        img = Image.open(image_path)
+    except Exception as e:
+        raise ValueError(f"Could not read image from {image_path}") from e
 
-    # Convert BGR to RGB
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    # Convert to RGB (handles RGBA or Grayscale images properly)
+    img = img.convert("RGB")
 
     # Resize image
-    image = cv2.resize(image, (IMG_WIDTH, IMG_HEIGHT))
+    img = img.resize((IMG_WIDTH, IMG_HEIGHT))
+
+    # Convert to numpy array
+    image = np.array(img)
 
     # Normalize pixel values to [0, 1]
     image = image.astype(np.float32) / 255.0

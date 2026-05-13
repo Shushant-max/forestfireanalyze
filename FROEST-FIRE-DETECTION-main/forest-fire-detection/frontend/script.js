@@ -1,5 +1,5 @@
 if (typeof APP_API_URL === 'undefined') {
-    window.APP_API_URL = 'https://ewu8cce0sc.execute-api.ap-south-1.amazonaws.com';
+    window.APP_API_URL = ''; // Relative path for Vercel deployment
 }
 const APP_API_URL = window.APP_API_URL;
 

@@ -2,6 +2,4 @@ flask
 flask-cors
 werkzeug
 pillow
-opencv-python-headless
 requests
-gunicorn

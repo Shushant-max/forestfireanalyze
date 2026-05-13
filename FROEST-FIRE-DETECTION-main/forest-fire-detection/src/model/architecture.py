@@ -45,12 +45,13 @@ def save_model(model, scaler, model_path=MODEL_PATH):
         scaler: Fitted scaler
         model_path: Path to save the model
     """
-    os.makedirs(os.path.dirname(model_path), exist_ok=True)
-
-    with open(model_path, 'wb') as f:
-        pickle.dump({'model': model, 'scaler': scaler}, f)
-
-    print(f"Model saved to {model_path}")
+    try:
+        os.makedirs(os.path.dirname(model_path), exist_ok=True)
+        with open(model_path, 'wb') as f:
+            pickle.dump({'model': model, 'scaler': scaler}, f)
+        print(f"Model saved to {model_path}")
+    except OSError as e:
+        print(f"Could not save model to {model_path} (likely read-only filesystem): {e}")
 
 def load_model(model_path=MODEL_PATH):
     """

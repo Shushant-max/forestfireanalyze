@@ -2,10 +2,6 @@ numpy
 pillow
 flask
 flask-cors
-opencv-python-headless
-matplotlib
 scikit-learn
-pytest
 requests
-gunicorn
 werkzeug
