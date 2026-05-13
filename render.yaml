@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: forest-fire-api
+    name: forestfireanalyze
     env: python
-    buildCommand: "cd FROEST-FIRE-DETECTION-main/forest-fire-detection && pip install -r backend/requirements.txt"
-    startCommand: "cd FROEST-FIRE-DETECTION-main/forest-fire-detection && gunicorn backend.app:app"
+    rootDir: FROEST-FIRE-DETECTION-main/forest-fire-detection
+    buildCommand: "pip install -r requirements.txt && pip install -r backend/requirements.txt"
+    startCommand: "gunicorn backend.app:app --bind 0.0.0.0:$PORT"
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
