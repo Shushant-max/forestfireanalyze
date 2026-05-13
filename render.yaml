@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: forest-fire-api
+    env: python
+    buildCommand: "cd FROEST-FIRE-DETECTION-main/forest-fire-detection && pip install -r backend/requirements.txt"
+    startCommand: "cd FROEST-FIRE-DETECTION-main/forest-fire-detection && gunicorn backend.app:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: FLASK_SECRET_KEY
+        generateValue: true

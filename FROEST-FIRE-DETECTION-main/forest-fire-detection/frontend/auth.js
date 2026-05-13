@@ -1,4 +1,7 @@
-const AUTH_API_BASE = 'http://localhost:5000/auth';
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? 'http://localhost:5000' 
+    : ''; // Leave empty for relative paths or update with Render URL
+const AUTH_API_BASE = `${API_URL}/auth`;
 const GOOGLE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID';
 
 function postJSON(url, payload) {
