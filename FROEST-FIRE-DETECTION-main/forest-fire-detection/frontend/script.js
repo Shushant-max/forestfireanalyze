@@ -1,7 +1,10 @@
 // Forest Fire Detection System - Frontend JavaScript
-const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-    ? 'http://localhost:5000' 
-    : 'https://forestfireanalyze.onrender.com';
+if (typeof APP_API_URL === 'undefined') {
+    window.APP_API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+        ? 'http://localhost:5000' 
+        : 'https://forestfireanalyze.onrender.com';
+}
+const APP_API_URL = window.APP_API_URL;
 
 
 let selectedFile = null;
@@ -143,7 +146,7 @@ async function predictFire() {
     formData.append('file', selectedFile);
 
     try {
-        const response = await fetch(`${API_URL}/api/predict`, {
+        const response = await fetch(`${APP_API_URL}/api/predict`, {
             method: 'POST',
             body: formData
         });
@@ -211,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
     requireLogin();
 
     // Check if backend is running
-    fetch(`${API_URL}/api/health`)
+    fetch(`${APP_API_URL}/api/health`)
         .then(response => response.json())
         .then(data => {
             console.log('Backend status:', data);
