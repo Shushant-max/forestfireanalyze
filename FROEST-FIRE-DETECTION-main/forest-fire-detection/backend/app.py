@@ -23,15 +23,18 @@ def create_app():
     app = Flask(__name__, static_folder=frontend_dir, template_folder=frontend_dir)
     app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET_KEY', 'forest-fire-secret')
 
-    # Enable CORS
-    CORS(app)
+    # Enable CORS for all origins
+    CORS(app, resources={r"/*": {"origins": "*"}})
+    print("CORS enabled for all origins")
 
     # Setup logging
     setup_logging()
+    print("Logging setup complete")
 
     # Register blueprints
     app.register_blueprint(api, url_prefix='/api')
     app.register_blueprint(auth_bp, url_prefix='/auth')
+    print("Blueprints registered")
 
     @app.route('/', defaults={'path': ''})
     @app.route('/<path:path>')
