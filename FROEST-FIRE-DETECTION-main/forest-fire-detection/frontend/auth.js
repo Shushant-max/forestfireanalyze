@@ -1,4 +1,4 @@
-const API_URL = window.location.origin;
+const API_URL = 'https://ewu8cce0sc.execute-api.ap-south-1.amazonaws.com';
 const AUTH_API_BASE = `${API_URL}/auth`;
 const GOOGLE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID';
 
