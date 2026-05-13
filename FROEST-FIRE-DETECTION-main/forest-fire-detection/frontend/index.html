@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Fire Detection System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <div class="brand">
+                    <h1>Forest Fire Detection</h1>
+                    <p>Secure AI-based forest hazard detection with satellite visualization.</p>
+                </div>
+                <div class="auth-bar" id="authBar">
+                    <a href="login.html">Login</a>
+                    <span class="auth-divider">|</span>
+                    <a href="signup.html">Sign Up</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="hero-card">
+                <div>
+                    <h2>Professional wildfire scanning with satellite insights</h2>
+                    <p>Login first to use the secure detection dashboard, upload imagery, and view satellite 360° preview of fire or forest conditions.</p>
+                </div>
+                <div class="hero-status">
+                    <span id="userStatusText">Signed out</span>
+                    <button class="logout-btn" id="logoutHeaderBtn" onclick="logout()" style="display:none;">Logout</button>
+                </div>
+            </div>
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                        </svg>
+                        <p>Drag & drop an image here or click to browse</p>
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                        <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                            Browse Files
+                        </button>
+                    </div>
+                </div>
+
+                <div class="file-info" id="fileInfo" style="display: none;">
+                    <p id="fileName"></p>
+                    <button class="remove-btn" onclick="removeFile()">×</button>
+                </div>
+            </div>
+
+            <div class="predict-section">
+                <button class="predict-btn" id="predictBtn" disabled>
+                    <span class="btn-text">Detect Fire</span>
+                    <div class="loading-spinner" id="loadingSpinner" style="display: none;"></div>
+                </button>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="image-preview">
+                    <img id="previewImage" alt="Uploaded image">
+                </div>
+
+                <div class="prediction-result">
+                    <div class="result-header">
+                        <h3>Prediction Results</h3>
+                    </div>
+
+                    <div class="result-content">
+                        <div class="prediction-badge" id="predictionBadge">
+                            <!-- Prediction result will be inserted here -->
+                        </div>
+
+                        <div class="confidence-meter">
+                            <div class="confidence-label">
+                                <span>Confidence:</span>
+                                <span id="confidenceValue">0%</span>
+                            </div>
+                            <div class="confidence-bar">
+                                <div class="confidence-fill" id="confidenceFill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;">
+                <p id="errorText"></p>
+            </div>
+
+            <!-- Location Input Section -->
+            <div class="location-section" id="locationSection" style="display: none;">
+                <h3>Add Location Information</h3>
+                <div class="location-inputs">
+                    <div class="input-group">
+                        <label for="latitude">Latitude:</label>
+                        <input type="number" id="latitude" step="any" placeholder="e.g., 40.7128">
+                    </div>
+                    <div class="input-group">
+                        <label for="longitude">Longitude:</label>
+                        <input type="number" id="longitude" step="any" placeholder="e.g., -74.0060">
+                    </div>
+                    <button class="location-btn" onclick="getCurrentLocation()">Use Current Location</button>
+                    <button class="location-btn add-btn" onclick="addLocationToMap()">Add to Map</button>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section" id="mapSection" style="display: none;">
+                <h3>Fire Detection Map</h3>
+                <p class="map-subtitle">Satellite view of the detected fire location</p>
+                <div id="map" style="height: 400px; width: 100%; border-radius: 10px;"></div>
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <div class="legend-color fire-marker"></div>
+                        <span>Fire Detected</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color safe-marker"></div>
+                        <span>No Fire</span>
+                    </div>
+                </div>
+
+                <div class="view360-section" id="view360Section" style="display: none;">
+                    <h3 id="view360Title">Interactive 360° Preview</h3>
+                    <div class="view360-wrapper">
+                        <div class="view360-panel">
+                            <img id="view360Image" alt="360° preview">
+                            <div class="view360-overlay">
+                                <span id="view360Label">360° Preview</span>
+                            </div>
+                        </div>
+                        <div class="view360-actions">
+                            <button class="rotate-btn" id="randomizeViewBtn" onclick="randomizeView()">New 360° Scene</button>
+                            <p id="view360Description">Simulated immersive view using satellite-style imagery. Red indicates fire terrain, green indicates healthy forest conditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Forest Fire Detection System. Built with TensorFlow and Flask.</p>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

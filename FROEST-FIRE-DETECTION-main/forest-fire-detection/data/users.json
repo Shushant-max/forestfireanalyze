@@ -1,0 +1,8 @@
+{
+  "shushantpanchal88@gmail.com": {
+    "name": "vinayaka",
+    "email": "shushantpanchal88@gmail.com",
+    "password_hash": "scrypt:32768:8:1$1hCTYtow7UpUNbmw$32f6636a2953a1bf0e2c41c7603719fa347a766ee1ad8417a6c827496cb1c05244fca2cd036dc10481097546562a602b9a3f5c9b97aa5e42f3ca297bf8cdf68d",
+    "auth_provider": "local"
+  }
+}

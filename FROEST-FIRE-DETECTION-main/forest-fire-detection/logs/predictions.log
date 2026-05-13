@@ -1,0 +1,151 @@
+# Forest Fire Detection - Prediction Logs
+# Format: timestamp - level - message
+2026-04-29 16:59:40 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.132.145.175:5000
+2026-04-29 16:59:40 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-29 16:59:40 - INFO -  * Restarting with stat
+2026-04-29 16:59:42 - WARNING -  * Debugger is active!
+2026-04-29 16:59:42 - INFO -  * Debugger PIN: 488-741-142
+2026-04-29 17:00:38 - INFO - 127.0.0.1 - - [29/Apr/2026 17:00:38] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:00:47 - INFO - 127.0.0.1 - - [29/Apr/2026 17:00:47] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:01:37 - INFO - Prediction: No Fire, Confidence: 0.5200, Image: C:\Users\shush\AppData\Local\Temp\1.jpg
+2026-04-29 17:01:37 - INFO - 127.0.0.1 - - [29/Apr/2026 17:01:37] "POST /api/predict HTTP/1.1" 200 -
+2026-04-29 17:11:00 - INFO - Prediction: Fire Detected, Confidence: 0.5100, Image: C:\Users\shush\AppData\Local\Temp\fire.jpeg
+2026-04-29 17:11:00 - INFO - 127.0.0.1 - - [29/Apr/2026 17:11:00] "POST /api/predict HTTP/1.1" 200 -
+2026-04-29 17:13:11 - INFO -  * Detected change in 'C:\\Users\\shush\\OneDrive\\Desktop\\froest fire\\forest-fire-detection\\tests\\test_model.py', reloading
+2026-04-29 17:13:12 - INFO -  * Restarting with stat
+2026-04-29 17:13:16 - WARNING -  * Debugger is active!
+2026-04-29 17:13:16 - INFO -  * Debugger PIN: 488-741-142
+2026-04-29 17:13:23 - INFO -  * Detected change in 'C:\\Users\\shush\\OneDrive\\Desktop\\froest fire\\forest-fire-detection\\tests\\test_model.py', reloading
+2026-04-29 17:13:24 - INFO -  * Restarting with stat
+2026-04-29 17:13:26 - WARNING -  * Debugger is active!
+2026-04-29 17:13:26 - INFO -  * Debugger PIN: 488-741-142
+2026-04-29 17:13:28 - INFO -  * Detected change in 'C:\\Users\\shush\\OneDrive\\Desktop\\froest fire\\forest-fire-detection\\tests\\test_model.py', reloading
+2026-04-29 17:13:28 - INFO -  * Restarting with stat
+2026-04-29 17:13:31 - WARNING -  * Debugger is active!
+2026-04-29 17:13:31 - INFO -  * Debugger PIN: 488-741-142
+2026-04-29 17:13:37 - INFO -  * Detected change in 'C:\\Users\\shush\\OneDrive\\Desktop\\froest fire\\forest-fire-detection\\tests\\test_model.py', reloading
+2026-04-29 17:13:37 - INFO -  * Restarting with stat
+2026-04-29 17:13:40 - WARNING -  * Debugger is active!
+2026-04-29 17:13:40 - INFO -  * Debugger PIN: 488-741-142
+2026-04-29 17:14:40 - INFO -  * Detected change in 'C:\\Users\\shush\\OneDrive\\Desktop\\froest fire\\forest-fire-detection\\tests\\test_model.py', reloading
+2026-04-29 17:14:41 - INFO -  * Restarting with stat
+2026-04-29 17:14:43 - WARNING -  * Debugger is active!
+2026-04-29 17:14:43 - INFO -  * Debugger PIN: 488-741-142
+2026-04-29 17:14:48 - INFO -  * Detected change in 'C:\\Users\\shush\\OneDrive\\Desktop\\froest fire\\forest-fire-detection\\tests\\test_model.py', reloading
+2026-04-29 17:14:48 - INFO -  * Restarting with stat
+2026-04-29 17:14:51 - WARNING -  * Debugger is active!
+2026-04-29 17:14:51 - INFO -  * Debugger PIN: 488-741-142
+2026-04-29 17:21:14 - INFO - Prediction: Fire Detected, Confidence: 0.5100, Image: C:\Users\shush\AppData\Local\Temp\fire.jpeg
+2026-04-29 17:21:14 - INFO - 127.0.0.1 - - [29/Apr/2026 17:21:14] "POST /api/predict HTTP/1.1" 200 -
+2026-04-29 17:23:40 - INFO - 127.0.0.1 - - [29/Apr/2026 17:23:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:23:59 - INFO - 127.0.0.1 - - [29/Apr/2026 17:23:59] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:24:04 - INFO - 127.0.0.1 - - [29/Apr/2026 17:24:04] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:24:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:24:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:24:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:24:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:24:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:24:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:24:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:24:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:09 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:09] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:10 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:10] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:10 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:10] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:10 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:10] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:10 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:10] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:10 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:10] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:10 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:10] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:11 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:11] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:11 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:11] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:25:11 - INFO - 127.0.0.1 - - [29/Apr/2026 17:25:11] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:04 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:04] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:26:49 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:49] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:27:07 - INFO - Prediction: Fire Detected, Confidence: 0.5100, Image: C:\Users\shush\AppData\Local\Temp\fire.jpeg
+2026-04-29 17:27:07 - INFO - 127.0.0.1 - - [29/Apr/2026 17:27:07] "POST /api/predict HTTP/1.1" 200 -
+2026-04-29 17:28:39 - INFO -  * Detected change in 'C:\\Users\\shush\\OneDrive\\Desktop\\froest fire\\forest-fire-detection\\backend\\app.py', reloading
+2026-04-29 17:28:40 - INFO -  * Restarting with stat
+2026-04-29 17:28:44 - WARNING -  * Debugger is active!
+2026-04-29 17:28:44 - INFO -  * Debugger PIN: 488-741-142
+2026-04-29 17:28:57 - INFO -  * Detected change in 'C:\\Users\\shush\\OneDrive\\Desktop\\froest fire\\forest-fire-detection\\backend\\app.py', reloading
+2026-04-29 17:28:57 - INFO -  * Restarting with stat
+2026-04-29 17:29:01 - WARNING -  * Debugger is active!
+2026-04-29 17:29:01 - INFO -  * Debugger PIN: 488-741-142
+2026-04-29 17:31:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:31:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:31:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:31:05] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:31:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:31:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:31:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:31:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:31:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:31:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:31:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:31:06] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:31:07 - INFO - 127.0.0.1 - - [29/Apr/2026 17:31:07] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:31:51 - INFO - Prediction: Fire Detected, Confidence: 0.5100, Image: C:\Users\shush\AppData\Local\Temp\fire.jpeg
+2026-04-29 17:31:51 - INFO - 127.0.0.1 - - [29/Apr/2026 17:31:51] "POST /api/predict HTTP/1.1" 200 -
+2026-04-29 17:40:33 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:33] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:40:33 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:33] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:40:34 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:34] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:40:34 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:34] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:40:34 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:34] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:40:35 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:35] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:40:35 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:35] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:40:42 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:42] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:40:43 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:43] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2026-04-29 17:40:45 - INFO - 127.0.0.1 - - [29/Apr/2026 17:40:45] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:00 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:00] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:00 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:00] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:01 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:01] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:02 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:02] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:03 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:03] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:03 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:03] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:03 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:03] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:04 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:04] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:05] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:06] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:06 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:06] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:07 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:07] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:08 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:08] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:08 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:08] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:09 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:09] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:09 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:09] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:09 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:09] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:10 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:10] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:10 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:10] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:41:17 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:17] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:18 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:18] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:18 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:18] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:19 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:19] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:19 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:19] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2026-04-29 17:41:19 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:19] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2026-04-29 17:41:20 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:20] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2026-04-29 17:41:49 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:49] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:50 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:50] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:50 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:50] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:51 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:51] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:51 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:51] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2026-04-29 17:41:51 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:51] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:52 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:52] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:52 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:52] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:53 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:53] "[31m[1mPOST /auth/login HTTP/1.1[0m" 401 -
+2026-04-29 17:41:54 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:54] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:41:54 - INFO - 127.0.0.1 - - [29/Apr/2026 17:41:54] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:46:51 - INFO - 127.0.0.1 - - [29/Apr/2026 17:46:51] "OPTIONS /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:46:52 - INFO - 127.0.0.1 - - [29/Apr/2026 17:46:52] "POST /auth/signup HTTP/1.1" 200 -
+2026-04-29 17:46:52 - INFO - 127.0.0.1 - - [29/Apr/2026 17:46:52] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:47:15 - INFO - Prediction: Fire Detected, Confidence: 0.5100, Image: C:\Users\shush\AppData\Local\Temp\fire.jpeg
+2026-04-29 17:47:15 - INFO - 127.0.0.1 - - [29/Apr/2026 17:47:15] "POST /api/predict HTTP/1.1" 200 -
+2026-04-29 17:51:03 - INFO - 127.0.0.1 - - [29/Apr/2026 17:51:03] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:51:14 - INFO - 127.0.0.1 - - [29/Apr/2026 17:51:14] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:51:15 - INFO - 127.0.0.1 - - [29/Apr/2026 17:51:15] "POST /auth/login HTTP/1.1" 200 -
+2026-04-29 17:51:15 - INFO - 127.0.0.1 - - [29/Apr/2026 17:51:15] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:51:48 - INFO - 127.0.0.1 - - [29/Apr/2026 17:51:48] "OPTIONS /auth/login HTTP/1.1" 200 -
+2026-04-29 17:51:49 - INFO - 127.0.0.1 - - [29/Apr/2026 17:51:49] "POST /auth/login HTTP/1.1" 200 -
+2026-04-29 17:51:49 - INFO - 127.0.0.1 - - [29/Apr/2026 17:51:49] "GET /api/health HTTP/1.1" 200 -
+2026-04-29 17:52:05 - INFO - Prediction: Fire Detected, Confidence: 0.5100, Image: C:\Users\shush\AppData\Local\Temp\fire.jpeg
+2026-04-29 17:52:05 - INFO - 127.0.0.1 - - [29/Apr/2026 17:52:05] "POST /api/predict HTTP/1.1" 200 -

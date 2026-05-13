@@ -1,0 +1,9 @@
+numpy
+pillow
+flask
+flask-cors
+opencv-python
+matplotlib
+scikit-learn
+pytest
+requests

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Forest Fire Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>Login</h1>
+            <p>Access the fire detection dashboard and upload images.</p>
+            <div class="auth-form">
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="auth-submit-btn">Login</button>
+                </form>
+                <div class="divider"><span>or</span></div>
+                <div id="googleButton" class="google-button"></div>
+                <div id="authError" class="auth-error" style="display:none;"></div>
+                <p class="auth-switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => initAuthPage('login'));</script>
+</body>
+</html>
