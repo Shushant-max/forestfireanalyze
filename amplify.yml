@@ -1,0 +1,12 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands: []
+  artifacts:
+    # This points to the folder containing index.html
+    baseDirectory: FROEST-FIRE-DETECTION-main/forest-fire-detection/frontend
+    files:
+      - '**/*'
+  cache:
+    paths: []
