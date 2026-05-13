@@ -11,8 +11,8 @@ MODELS_DIR = os.path.join(BASE_DIR, 'models')
 LOGS_DIR = os.path.join(BASE_DIR, 'logs')
 
 # Model parameters
-IMG_HEIGHT = 224
-IMG_WIDTH = 224
+IMG_HEIGHT = 64
+IMG_WIDTH = 64
 BATCH_SIZE = 32
 EPOCHS = 20
 LEARNING_RATE = 0.001

@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler
 import pickle
 import os
-from src.config.config import MODEL_PATH
+from src.config.config import MODEL_PATH, IMG_HEIGHT, IMG_WIDTH
 
 def create_model():
     """
@@ -19,8 +19,8 @@ def create_model():
     """
     # Create dummy training data for demonstration
     np.random.seed(42)
-    n_samples = 1000
-    n_features = 224 * 224 * 3  # Flattened image size
+    n_samples = 100
+    n_features = IMG_HEIGHT * IMG_WIDTH * 3  # Flattened image size
 
     # Generate random features
     X = np.random.rand(n_samples, n_features)
